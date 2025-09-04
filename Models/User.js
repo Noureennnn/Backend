@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
     },
     location:{
         type:String,
-        enum:["Giza","Alexandria","Cairo","Siwa","6th of October","Ismalia","Other"],
+        enum:["Egypt","United States","Spain","Italy","France","Canada","Other"],
         required:true
     }
 },{timestamps:true});
