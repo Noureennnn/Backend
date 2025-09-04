@@ -7,12 +7,9 @@ console.log("MONGO_URI:", process.env.MONGO_URI ? "Loaded" : "Not loaded");
 const eventRoutes = require("./Routers/eventRoutes.js");
 const authRoutes = require("./Routers/authRoutes.js");
 const ticketRoutes = require("./Routers/ticketRoutes.js");
-const socketIo = require('socket.io');
 const http = require("http");
 const app = express();
 const server = http.createServer(app);
-const {protect, adminOnly} = require("./Middleware/authMiddleware.js")
-const { createEvent } = require("./Controllers/eventController.js")
 
 app.use(express.json());
 app.use(cors());

@@ -87,7 +87,7 @@ const bookEvent = async (req, res) => {
         event.tickets.push(ticket._id);
         bookedTickets.push(ticket);
       } catch (ticketErr) {
-        console.error("🎟️ Ticket creation error:", ticketErr.message);
+        console.error("Ticket creation error:", ticketErr.message);
         return res.status(500).json({ message: "Failed to create ticket" });
       }
     }
