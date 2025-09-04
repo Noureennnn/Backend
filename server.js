@@ -18,6 +18,9 @@ connectDB();
 app.use("/api/events", eventRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/Tickets",ticketRoutes);
+app.get('/', (req, res) => {
+  res.send('Hello from the backend!');
+});
 
 app.post('/create-payment-intent', async (req, res) => {
   const { amount } = req.body;
